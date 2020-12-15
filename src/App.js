@@ -18,7 +18,7 @@ function App() {
 
   const [filter, setFilter] = useState('');
 
-  const addContact = ({ name, number }) => {
+  const addContact = (name, number) => {
     const contact = {
       id: shortid.generate(),
       name,
