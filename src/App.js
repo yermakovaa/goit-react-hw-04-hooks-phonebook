@@ -25,9 +25,6 @@ function App() {
       number,
     };
 
-    if (name.length > 25) {
-    }
-
     if (
       contacts.find(
         contact => contact.name.toLowerCase() === name.toLowerCase(),
