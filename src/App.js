@@ -25,6 +25,9 @@ function App() {
       number,
     };
 
+    if (name.length > 25) {
+    }
+
     if (
       contacts.find(
         contact => contact.name.toLowerCase() === name.toLowerCase(),
@@ -38,8 +41,8 @@ function App() {
     } else if (!/\d{3}[-]\d{2}[-]\d{2}/g.test(number)) {
       toast.error('💩 Enter the correct number phone!');
     } else {
-      setContacts(
-        [contact, ...contacts].sort((a, b) => {
+      setContacts(prevContacts =>
+        [contact, ...prevContacts].sort((a, b) => {
           if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
           if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
           return 0;

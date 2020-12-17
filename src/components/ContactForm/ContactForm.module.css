@@ -44,6 +44,7 @@
   text-transform: uppercase;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   opacity: 1;
 }
